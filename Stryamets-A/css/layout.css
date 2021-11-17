@@ -1,0 +1,60 @@
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html,
+body {
+    font-family: 'Furore';
+    font-size: 16px;
+}
+
+/*
+#fullpage {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#fullpage .section {
+  height: 100vh;
+}
+*/
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Furore';
+    color: #00ff7f;
+}
+p{
+    font-family: 'Furore';
+    color: #00ff7f;
+    
+}
+
+section {
+    min-height: 100vh;
+    /*Тимчасово*/
+}
+
+section:nth-child(even) {
+    background-color: #ccc;
+}
+
+section:nth-child(odd) {
+    background-color: #eee;
+}
+
+header {
+    min-height: 100vh;
+    background-color: #000;
+
+}
+

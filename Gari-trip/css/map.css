@@ -1,0 +1,112 @@
+#m1 { 
+	background-color: #eee;
+	padding:0;
+}
+
+.map {
+	position: relative;
+	margin: auto;
+}
+
+.map img
+{
+	display:block;
+	width: 100%;
+}
+
+.map svg {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-top: -2%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 56%;
+}
+
+.map svg a {
+	display: block;
+	width: 100%;
+	/*transform: scale(1.5);*/
+}
+
+.svg-lnk > circle:first-child {
+	transition: r .3s ease;
+}
+
+.svg-lnk:hover > circle:first-child {
+	r: 12px;
+}
+
+#palatka[data-pos="1"] {
+	animation: place1 1s ease;
+	animation-fill-mode: forwards;
+}
+
+#palatka[last-pos="1"][data-pos="2"] {
+	animation: place12 1s ease;
+	animation-fill-mode: forwards;
+}
+#palatka[last-pos="3"][data-pos="2"] {
+	animation: place32 1s ease;
+	animation-fill-mode: forwards;
+}
+
+#palatka[last-pos="1"][data-pos="3"] {
+	animation: place13 1s ease;
+	animation-fill-mode: forwards;
+}
+
+#palatka[last-pos="2"][data-pos="3"] {
+	animation: place23 1s ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes place1 {
+	0% {}
+	100% {
+		transform: none;
+	}
+}
+
+@keyframes place12 {
+	0% {}
+	100% {
+		transform: translate(59.7%, -79%);
+	}
+}
+
+@keyframes place32 {
+	0% {transform: translate(92.7%, -50%);}
+	100% {
+		transform: translate(59.7%, -79%);
+	}
+}
+
+@keyframes place13 {
+	0% {}
+	
+	60% {
+		transform: translate(59.7%, -79%);
+	}
+	100% {
+		transform: translate(92.7%, -50%);
+	}
+}
+
+@keyframes place23 {
+	0% {transform: translate(59.7%, -79%);}
+
+	100% {
+		transform: translate(92.7%, -50%);
+	}
+}
+
+@media screen and (orientation: portrait) {
+	
+	.map {
+		width: 160%;
+		margin-left: -30%;
+		overflow-x: hidden;
+	}
+
+}

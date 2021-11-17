@@ -1,0 +1,58 @@
+#s4 h2 {
+    margin-bottom: 1em;
+}
+
+#top .lg-backdrop {
+    z-index:9998;
+    background-color: #fff;
+}
+
+#top .lg-outer {
+    z-index:9999;
+}
+
+#top .lg-toolbar {
+    background-color: #fff;
+}
+
+#top .lg-toolbar .lg-icon {
+    color:#000;
+}
+
+#top .lg-actions .lg-next,
+#top .lg-actions .lg-prev {
+    background-color: transparent;
+}
+
+#top .lg-actions .lg-next:hover,
+#top .lg-actions .lg-prev:hover {
+    color:#000;
+}
+
+.ph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:-1em;
+    margin-right:-1em;
+}
+
+ .ph .img-ph {
+    width: 25%;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+}
+
+.img-ph img {
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width:720px) {
+
+    .ph .img-ph {
+        width: 50%;
+    }
+}

@@ -1,0 +1,166 @@
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 9995;
+}
+
+nav {
+    background-color: rgba(255,255,255,1);
+}
+
+nav .logo {
+    max-width: 40px;
+    width: 40px;
+    transition: all .35s cubic-bezier(.15,.2,.2,.95);
+}
+
+nav.topfixed .logo {
+    width: 40px;
+    max-width: 40px;
+}
+
+nav .logo svg {
+    fill: #000; /* колір логотипу спочатку */
+}
+
+nav.topfixed .logo svg {
+    display: block;
+    width:100%;
+    fill: #000; /* колір логотипу після скролу */
+}
+
+nav.topfixed .navigation li a {
+    color: #000;
+}
+
+nav a {
+    display: block;
+    
+}
+
+nav .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    flex-direction: row;
+}
+
+.navigation ul {
+    display: flex;
+    font-size: 0.9em;
+    letter-spacing: .05em;
+    list-style: none;
+}
+.navigation li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navigation li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navigation button {
+    background: none;
+    border: none;
+    outline: none;
+    display: none; 
+}
+a:hover, a:focus, a:active {
+    color: #999;
+    text-decoration: none;
+}
+a {
+    transition: color 0.1s, background-color 0.1s;
+}
+a {
+    position: relative;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: #000;
+}
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+a:active::before {
+    background-color: #000;
+}
+a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav .navbar {
+        align-items: center;
+    }
+    
+    nav .navigation li a,
+    nav.topfixed .navigation li a {
+        color: #fff;
+    }
+
+    .navigation button {
+        position: relative;
+        display: block;
+        margin: 0;
+        z-index: 9999;
+    }
+    
+    .navigation ul {
+        background-color: rgba(10,10,10,.8);
+        position: absolute;
+        padding: 100px 30px 30px 20px;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        min-width: 75%;
+        min-height: 100vh;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        opacity:0;
+        transition-property: transform;
+        transition-duration: .35s;
+/*        transition-delay: .2s;*/
+        transition-timing-function: ease;
+        z-index: 9998;
+    }
+    
+    .navigation.open ul {
+        transform: translateX(0);
+        opacity:1;
+    }
+    
+    .navigation.open .overlay {
+        background-color: rgba(10,10,10, .3);
+        display: block;
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        min-height: 100vh;
+        z-index: 99;
+    }
+}

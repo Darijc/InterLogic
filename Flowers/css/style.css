@@ -1,0 +1,456 @@
+@font-face {
+  font-family: "Gotham Pro Light";
+  src: url(../Fonts/GothamPro-Light.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro Medium";
+  src: url(../Fonts/GothamPro-Medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamPro";
+  src: url(../Fonts/GothamPro.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* *:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #292929;
+  color: white;
+  font-family: "GothamPro", sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding-top: 50px;
+}
+
+.description {
+  font-family: "Gotham Pro Light";
+}
+
+.text-color-red {
+  color: #ff3469;
+  font-family: "GothamPro";
+}
+
+.header-description {
+  font-family: "GGotham Pro Medium";
+  letter-spacing: 0.12px;
+  font-size: 12px;
+}
+
+.header-phone {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: right;
+  font-family: "Gotham Pro Medium";
+  font-weight: 500;
+  display: block;
+}
+
+.header-info {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 7px;
+  display: block; /* иначе он не будет двигаться (если он строчный) */
+  text-align: right;
+}
+
+.callback {
+  color: #ff3469;
+  text-align: right;
+  display: block;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 77px;
+  text-align: center;
+  border-bottom: 1px solid #4c4c4c;
+}
+
+.hero-title {
+  font-size: 34px;
+  margin-bottom: 34px;
+  text-transform: uppercase;
+  letter-spacing: 0.34px;
+  font-family: "Gotham Pro Medium";
+  max-width: 652px;
+  margin: auto;
+}
+
+.hero-description {
+  font-size: 18px;
+  font-family: "Gotham Pro Light";
+  text-transform: uppercase;
+  letter-spacing: 0.18px;
+  line-height: 1.4;
+  margin-bottom: 87px;
+}
+
+.flower-slider {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 83px;
+  margin-top: 87px;
+}
+
+:root {
+  --swiper-navigation-size: 18px;
+}
+
+.hero-cta {
+  display: block;
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  font-family: "Gotham Pro Light";
+}
+
+.button {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff2e55;
+  padding-top: 30px;
+  padding-bottom: 26px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-top: 36px;
+  cursor: pointer;
+  border: none;
+}
+
+.reviews {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.reviews-slider {
+  padding-left: 55px; /*зменшує ширину контейнера в слайдері*/
+  margin-top: 100px;
+}
+.rew-sl-3 {
+  margin-left: -60px;
+  left: 45px;
+}
+
+.review-slide {
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.review-image {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0; /* щоб не сплющувався */
+  border-radius: 50%;
+  overflow: hidden; /* все, що виходить за межі фотки , сховається */
+  font-size: 20px;
+  font-family: "Gotham Pro Light";
+  position: relative;
+  margin-right: 52px;
+  left: 10px;
+}
+
+.review-image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.review-image > * {
+  /* все, що всередині класу */
+  position: relative;
+}
+.review-image-1 {
+  background: #000 url("../img/reviews/shpak.jpeg") no-repeat;
+}
+
+.review-image-2 {
+  background: #000 url("../img/reviews/zerbino.jpg") no-repeat;
+}
+.review-image-3 {
+  background: #000 url("../img/reviews/zumbal.jpg") no-repeat;
+}
+.review-name {
+  margin-bottom: 7px;
+}
+
+.review-text {
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 1.4;
+  margin-left: 60px;
+}
+
+.review-link {
+  color: #f24841;
+}
+
+.section-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.advantages {
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  border-bottom: 1px solid #4c4c4c;
+}
+
+.advantages-wrapper {
+  min-height: 85px;
+  margin-bottom: 30px;
+}
+
+.advantages-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  min-width: 270px;
+  margin: auto;
+}
+
+.goods {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-description {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card {
+    text-align: center;
+    border: 3px solid #ffffff;
+    padding: 33px 35px 30px 35px;
+    margin-top: 27px;
+}
+
+.card-title {
+  margin-top: 23px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.card-label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 7px;
+  margin-top: 20px;
+}
+.color-label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.color-input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -9;
+}
+.color-label.white,.white-1,.white-2,.white-3, .white-4, .white-5, .white-6 {
+  background-color: #ffffff;
+}
+.color-label.beige, .beige-1, .beige-2, .beige-3, .beige-4{
+  background-color: #f7b496;
+}
+.color-label.pink, .pink-1, .pink-2, .pink-3{
+  background-color: #ed366e;
+}
+.color-label.red, .red-1 , .red-2 {
+  background-color: #ff0000;
+}
+.color-label.blue, .blue-1, .blue-2{
+  background-color: #12129d;
+}
+.color-label.yellow, .yellow-1, .yellow-2{
+  background-color: #f3f72f;
+}
+.color-label.violet, .violet-1, .violet-2{
+  background-color: #5e0d5a;
+}
+.color-label.jam {
+  background-color: #69032e;
+}
+.counter-input {
+  border: 2px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #292929;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.counter-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  background-color: #292929;
+  border: none;
+}
+.more {
+  font-size: 14px;
+  color: #ff0000;
+  display: block;
+  text-align: center;
+  margin-top: 39px;
+  padding: 10px;
+}
+.more:after {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 4px;
+  background: url('../img/caret.svg') no-repeat center;
+  margin-left: 14px;
+  vertical-align: middle;
+}
+.offer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+.offer-link {
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  margin-bottom: 65px;
+}
+.offer-label {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+.offer-phone {
+  font-size: 36px;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 33px;
+}
+.footer-menu-link {
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 18px;
+
+}
+.footer-menu-item {
+  margin-right: 30px;
+}
+.social {
+  font-size: 16px;
+}
+.footer-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.footer-info {
+  text-align: right;
+}
+.footer-phone {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 12px;
+}
+.modal {
+  display: none;
+}
+.modal-title {
+  color: #292929;
+}
+
+.modal-input {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+}
+@media (max-width : 768px) {
+  .header {
+    text-align: center;
+  }
+  .header-contacts {
+    text-align: center;
+  }
+  .hero {
+    padding-top: 50px;
+  }
+  .hero-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .button {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .colors {
+    min-width: 20px;
+    margin: 10px;
+  }
+  .card-label {
+     margin: 20px auto;
+     display: block;
+  }
+  .footer-info {
+    text-align: lefts;
+  }
+}
+@media (max-width : 576px) {
+  .offer, .footer-info {
+    text-align: left;
+  }
+  .offer-title {
+    text-align: left;
+  }
+}
+.myModal__close {
+  width: 21px; height: 21px;
+  position: absolute;
+  top: 1px; right: 11px;
+  cursor: pointer;
+  display: block;
+  font-size: 29px;
+}
+
+
